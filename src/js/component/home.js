@@ -16,14 +16,14 @@ export class Home extends React.Component {
 		this.state.isClicked === "red"
 			? (redClass = "red-light bright")
 			: (redClass = "red-light");
-		let yellowClass = "";
+        let yellowClass = "";
 		this.state.isClicked === "red"
 			? (yellowClass = "yellow-light bright")
 			: (yellowClass = "yellow-light");
-		let greenClass = "";
+        let greenClass = "";
 		this.state.isClicked === "red"
-			? (greenClass = "red-light bright")
-			: (greenClass = "red-light");
+			? (greenClass = "green-light bright")
+			: (greenClass = "green-light");
 
 		return (
 			<div className="traffic-container">
