@@ -5,21 +5,43 @@ import rigoImage from "../../img/rigo-baby.jpg";
 
 //create your first component
 export class Home extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			isClicked: null
+		};
+	}
 	render() {
+		let redClass = "";
+		this.state.isClicked === "red"
+			? (redClass = "red-light bright")
+			: (redClass = "red-light");
+		let yellowClass = "";
+		this.state.isClicked === "red"
+			? (yellowClass = "yellow-light bright")
+			: (yellowClass = "yellow-light");
+		let greenClass = "";
+		this.state.isClicked === "red"
+			? (greenClass = "red-light bright")
+			: (greenClass = "red-light");
+
 		return (
-			<div className="text-center mt-5">
-				<h1>Hello Rigo!</h1>
-				<p>
-					<img src={rigoImage} />
-				</p>
-				<a href="#" className="btn btn-success">
-					If you see this green button... bootstrap is working
-				</a>
-				<p>
-					Made by{" "}
-					<a href="http://www.4geeksacademy.com">4Geeks Academy</a>,
-					with love!
-				</p>
+			<div className="traffic-container">
+				<div className="stem" />
+				<div className="lights-container">
+					<div
+						onClick={() => this.setState({ isClicked: "red" })}
+						className={redClass}
+					/>
+					<div
+						onClick={() => this.setState({ isClicked: "yellow" })}
+						className={yellowClass}
+					/>
+					<div
+						onClick={() => this.setState({ isClicked: "green" })}
+						className={greenClass}
+					/>
+				</div>
 			</div>
 		);
 	}
