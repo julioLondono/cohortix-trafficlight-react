@@ -16,12 +16,12 @@ export class Home extends React.Component {
 		this.state.isClicked === "red"
 			? (redClass = "red-light bright")
 			: (redClass = "red-light");
-        let yellowClass = "";
-		this.state.isClicked === "red"
+		let yellowClass = "";
+		this.state.isClicked === "yellow"
 			? (yellowClass = "yellow-light bright")
 			: (yellowClass = "yellow-light");
-        let greenClass = "";
-		this.state.isClicked === "red"
+		let greenClass = "";
+		this.state.isClicked === "green"
 			? (greenClass = "green-light bright")
 			: (greenClass = "green-light");
 
